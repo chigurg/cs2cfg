@@ -1,0 +1,6 @@
+//SURF
+
+voice_enable 1
+voice_scale 0.6
+volume 0.01
+sensitivity 3.5

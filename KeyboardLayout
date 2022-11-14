@@ -1,0 +1,110 @@
+//Keyboard Layout
+//Buy binds
+exec buybinds
+
+
+//Bombbind
+//Bind for instantly dropping bomb, then immediately switch back to weapon
+bind "t" "use weapon_c4; drop;"
+
+//Jumpthrow BindS
+ //basic jumpthrow
+alias +jumpthrow "+jump;-attack"
+alias -jumpthrow "-jump"
+bind "f" +jumpthrow
+//window smoke throw mirage
+alias +walkthrow "+jumpthrow; +moveright"
+alias -walkthrow "-jumpthrow; -moveright"
+bind g +walkthrow
+
+bind "q" "lastinv"
+
+//binds
+bind "e" "+use"
+bind "r" "+reload"
+bind "x" "drop"
+
+//Movement
+bind "d" "+moveright"
+bind "w" "+forward"
+bind "a" "+moveleft"
+bind "s" "+back"
+bind "SHIFT" "+speed"
+bind "CTRL" "+duck"
+bind "MWHEELDOWN" "+jump"
+
+//misc self
+bind "p" "disconnect; exec autoexec"
+
+//misc default
+bind "i" "show_loadout_toggle"
+bind "m" "teammenu"
+bind "v" "clutch"
+bind "[" "+lookatweapon"
+bind "semicolon" "toggleconsole"
+
+//comms
+bind "u" "messagemode2"
+bind "y" "messagemode"
+
+bind "TAB" "+showscores"
+bind "ESCAPE" "cancelselect"
+bind "ALT" "+voicerecord"
+
+bind "F3" "autobuy"
+bind "F4" "con_logfile cfg/tp.cfg; getpos; con_logfile 0"
+bind "MOUSE1" "+attack"
+bind "MOUSE2" "+attack2"
+bind "MOUSE3" "player_ping; use weapon_c4"
+bind "MOUSE4" "use weapon_knife;use weapon_flashbang;"
+bind "MOUSE5" "use weapon_knife;use weapon_smokegrenade"
+bind "MWHEELUP" "invprev"
+bind "MWHEELDOWN" "+jump"
+bind "space" "+jump"
+
+//Slotbinds with switching crosshair
+alias "ch1" "-attack; bind "mouse1" "+attack"; cl_crosshairgap "-1"; cl_crosshairsize "2"; cl_crosshairthickness "0"; cl_crosshaircolor "4"; cl_crosshaircolor_b "50"; cl_crosshaircolor_r "50"; cl_crosshaircolor_g "250"; cl_crosshairdot "0"; cl_crosshairstyle "4"; cl_crosshairusealpha "1"; cl_crosshair_drawoutline "0"; sv_grenade_trajectory "0"" //default
+alias "ch2" "cl_crosshairgap -5; cl_crosshairsize 10000; cl_crosshaircolor 1; sv_grenade_trajectory "1"" //Smoke green
+alias "ch3" "cl_crosshairgap -5; cl_crosshairsize 10000; cl_crosshaircolor 5; cl_crosshaircolor_g 50; cl_crosshaircolor_b 0; cl_crosshaircolor_r 250; sv_grenade_trajectory "1"" //Molly Red
+alias "ch4" "cl_crosshairgap -5; cl_crosshairsize 10000; cl_crosshaircolor 4; sv_grenade_trajectory "1"" //Flash Blue
+
+alias "+smokemouse" "ch2;+attack"
+alias "+smokebind" "bind "mouse1" "+smokemouse""
+alias "-smokebind" "bind "mouse1" "+attack""
+alias "-smokemouse" "ch1;-attack;-smokebind"
+
+alias "+mollymouse" "ch3;+attack"
+alias "-mollymouse" "ch1;-attack;-mollybind"
+alias "+mollybind" "bind "mouse1" "+mollymouse""
+alias "-mollybind" "bind "mouse1" "+attack""
+
+alias "+flashmouse" "ch4;+attack"
+alias "-flashmouse" "ch1;-attack;-flashbind"
+alias "+flashbind" "bind "mouse1" "+flashmouse""
+alias "-flashbind" "bind "mouse1" "+attack""
+
+alias "s1" "ch1;slot1"
+alias "s2" "ch1;slot2"
+alias "s3" "ch1;slot3"
+alias "s4" "+mollybind;use weapon_knife;use weapon_incgrenade;use weapon_molotov"
+alias "s5" "ch1;use weapon_knife;use weapon_hegrenade"
+alias "m4" "+flashbind;use weapon_knife;use weapon_flashbang;"
+alias "m5" "+smokebind;use weapon_knife;use weapon_smokegrenade;"
+alias "m5" "+smokebind;use weapon_knife;use weapon_smokegrenade;"
+
+bind "1" "s1"
+bind "2" "s2"
+bind "3" "s3"
+bind "4" "s4"
+bind "5" "s5"
+bind "MOUSE4" "m4"
+bind "MOUSE5" "m5"
+
+//Unbound
+bind "6" "bind6;slot6"
+bind "7" "bind7;slot7"
+bind "8" "bind8;slot8"
+bind "9" "bind9;slot9"
+
+bind "," "buyammo1"
+bind "." "buyammo2"
